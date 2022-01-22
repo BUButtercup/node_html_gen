@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { lightgoldenrodyellow } = require('color-name');
+const { lightgoldenrodyellow, lavender, lightcoral, plum, seagreen, lightseagreen, lightcyan, mediumturquoise, mediumorchid, bisque, crimson } = require('color-name');
 
 inquirer.prompt ([
     {
@@ -25,7 +25,7 @@ inquirer.prompt ([
     },
     {
         type: 'input',
-        message: 'What is your ten-digit phone number?',
+        message: 'What is your ten-digit phone number (separate by dashes)?',
         name: 'phone'
     },
     {
@@ -66,10 +66,23 @@ inquirer.prompt ([
     const LINKEDIN = ans.linkedIn;
     const LINKEDINLINK = ans.linkedInLink;
     let COLOR = ans.color;
-    // let COMPCOLOR;
-    // if (COLOR === 'Orange'){
-    //     COMPCOLOR = lightgoldenrodyellow;
-    // } else if
+    let COMPCOLOR;
+    if (COLOR === 'Salmon'){
+        COMPCOLOR = 'lightcoral';
+    } else if (COLOR === 'Purple'){
+        COMPCOLOR = 'plum';
+    } else if (COLOR === 'Green'){
+        COLOR = 'seagreen'
+        COMPCOLOR = 'lightseagreen';
+    } else if (COLOR === 'Blue'){
+        COLOR = 'mediumturquoise'
+        COMPCOLOR = 'lightcyan';
+    } else if (COLOR === 'Magenta'){
+        COMPCOLOR = 'mediumorchid';
+    } else {
+        COLOR = 'crimson'
+        COMPCOLOR = 'bisque';
+    } 
 
     const profilePage = `<!DOCTYPE html>
     <html lang="en">
@@ -87,8 +100,8 @@ inquirer.prompt ([
             <nav>
                 <a href='mailto:${EMAIL}' class="foot">Email</a>
                 <a href='tel:${PHONE}' class="foot">Call</a>
-                <p>I'm on GitHub as <a href='${GITHUBLINK}' class="foot">${GITHUB}</a>.</p>
-                <p>I'm on LinkedIn as <a href='${LINKEDINLINK}'>${LINKEDIN}</a>.</p>
+                <p>I'm on GitHub as <a href='${GITHUBLINK}' class="head">${GITHUB}.</a></p>
+                <p>I'm on LinkedIn as <a href='${LINKEDINLINK}' class="head">${LINKEDIN}.</a></p>
             </nav>
             <p>I'm a developer from ${LOCATION}.</p>
             <p>I'm excited to work with you to bring your vision to life! I look forward to hearing from you.</p>
@@ -97,7 +110,8 @@ inquirer.prompt ([
     </body>
     </html>`
 
-    const styleSheet = `@font-face {
+    const styleSheet = `
+    @font-face {
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -120,25 +134,36 @@ inquirer.prompt ([
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: ${COLOR};
+        background-color:${COLOR};
     }
     
     h1 {
-        width: 50%;
+        width: 60%;
     }
     
     nav {
-        width: 50%;
-
+        width: 60%;
+        background-color: ${COLOR};
     }
     
-    p {
-        width: 50%;
+    header p {
+        width: 60%;
+    }
+    
+    nav p {
+        width: 40%;
+        padding: 5px;
+        margin-top: 20px;
+        background-color: ${COMPCOLOR};
     }
     
     body {
         padding: 30px;
-
+        background-color: ${COMPCOLOR};
+    }
+    
+    a {
+        padding-right: 20px;
     }
     
     a:link, a:visited {
@@ -147,7 +172,12 @@ inquirer.prompt ([
     }
     
     a:hover {
-        color: white;
+        color: ${COMPCOLOR};
+    }
+    
+    
+    a.head:hover {
+        color: ${COLOR};
     }`
 
     fs.writeFile(`${FIRSTNAME}${LASTNAME}.html`, profilePage, (err) =>{
