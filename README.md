@@ -13,13 +13,16 @@ https://drive.google.com/file/d/1sjyWGV4-m1sxlEh5_PL5DjmNXSEW6Rys/view?usp=shari
 
 Screenshots:
 <img width="799" alt="SS-node_html" src="https://user-images.githubusercontent.com/95940864/150684820-774c548c-1f72-4bb5-a9de-c6e8f5dcdd6e.png">
+
 Img 1 Caption: The inquirer package is the only one needed from npm
 
 <img width="871" alt="ss-node_html2" src="https://user-images.githubusercontent.com/95940864/150684826-ad829578-715b-4de0-b682-42708581c042.png">
 Img 2 Caption: THe program will ask you a series of questions. Be ready with your professional contact info and links.
 
+
 <img width="569" alt="ss-node_html3" src="https://user-images.githubusercontent.com/95940864/150684919-a3dc4715-b5fc-4c23-9b3a-b5294d3a02d5.png">
 Img 3 Caption: After answering the final question, the program will output an HTML and simple CSS file for you in the same folder.
+
 
 <img width="1216" alt="ss-node_html4" src="https://user-images.githubusercontent.com/95940864/150684839-8af83823-e0d9-4832-8f2e-7e5c51244687.png">
 Img 4 Caption: This is the generated HTML page with the "Blue" color choice. The simple CSS file pairs the blue with a matching color. In the future, this styling could be greatly customized with a CSS framework.
