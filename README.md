@@ -8,3 +8,7 @@ Use Instructions: to use this project, after the initial download and upon runni
 
 Future Development Ideas: Currently, this application is very simple in both the output and choices provided, and the colors used are a bit garish. With some fleshing out of the information asked for, and with the introduction of more sophisticated styling choices (maybe the use of a framework like Bootstrap), this could be turned into a personalized digital resume generator.
 
+Video Overview: 
+https://drive.google.com/file/d/1sjyWGV4-m1sxlEh5_PL5DjmNXSEW6Rys/view?usp=sharing
+
+Screenshots:
